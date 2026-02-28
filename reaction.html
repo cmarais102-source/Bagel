@@ -10,10 +10,31 @@
         color: white;
         text-align: center;
         overflow: hidden;
+        margin: 0;
+    }
+
+    /* HOME BUTTON */
+    .home-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #00ffcc;
+        color: black;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: 0.2s ease;
+        z-index: 1000;
+    }
+
+    .home-button:hover {
+        background-color: white;
+        transform: scale(1.05);
     }
 
     h1 {
-        margin-top: 30px;
+        margin-top: 60px;
         letter-spacing: 2px;
     }
 
@@ -46,6 +67,9 @@
 </style>
 </head>
 <body>
+
+<!-- HOME BUTTON -->
+<a href="index.html" class="home-button">🏠 Home</a>
 
 <h1>🏑 ELITE VISION TRAINER</h1>
 
@@ -88,7 +112,7 @@ function randomPosition(element) {
 function increaseDifficulty() {
     difficultyLevel++;
     maxDigits++;
-    displayTime = Math.max(60, displayTime - 15); // never below 60ms
+    displayTime = Math.max(60, displayTime - 15);
 }
 
 function startRound() {
@@ -151,10 +175,8 @@ function checkAnswer() {
     setTimeout(startRound, 800);
 }
 
-// Auto start after 1 second
 setTimeout(startRound, 1000);
 </script>
 
 </body>
 </html>
-add homepage
